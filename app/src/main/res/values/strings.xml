@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dagda_Cameras</string>
+    <string name="Cameras">Cameras</string>
+    <string name="Settings">Settings</string>
+    <string name="storage">Storage</string>
+    />
 </resources>
