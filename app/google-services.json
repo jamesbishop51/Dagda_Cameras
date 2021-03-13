@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1011171411886",
+    "project_id": "dagda-cameras",
+    "storage_bucket": "dagda-cameras.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011171411886:android:8c7285a48b2dee62466a3f",
+        "android_client_info": {
+          "package_name": "edu.jbishop.dagda_cameras"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011171411886-4f3u4p525lrptb9685clb27u5c78c3v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCziNSiJIawIolpK161s-cAwRrnlOaDnZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011171411886-4f3u4p525lrptb9685clb27u5c78c3v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
