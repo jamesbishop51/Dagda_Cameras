@@ -7,18 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <fragment
-        android:id="@+id/fragment_container"
-        android:name="edu.jbishop.dagda_cameras.Camera_fragment"
-        android:layout_width="384dp"
-        android:layout_height="669dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout="@layout/fragment_camera" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"

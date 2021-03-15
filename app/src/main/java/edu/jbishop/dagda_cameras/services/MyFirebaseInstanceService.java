@@ -16,20 +16,22 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 
 public class MyFirebaseInstanceService extends FirebaseMessagingService {
+
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         if(remoteMessage.getData().isEmpty()){
-            showNotification(remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
-        }else{
-            showNotification(remoteMessage.getData());
+            showNotification(Objects.requireNonNull(remoteMessage.getNotification()).getTitle(),remoteMessage.getNotification().getBody());
         }
+        //else{
+        //showNotification(remoteMessage.getData());
+        //}
     }
-
     private void showNotification(Map<String,String> data){
 
         String title = data.get("title").toString();

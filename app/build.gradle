@@ -42,9 +42,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.7.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging:21.0.1'
-    implementation 'com.damavandi:android-vlc-lib:1.0.1'
+    //implementation 'com.damavandi:android-vlc-lib:1.0.1'
     implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.9.5'
     implementation 'be.teletask.onvif:onvif:1.0.0'
+    compile 'de.mrmaffen:libvlc-android:2.1.12@aar'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

@@ -32,37 +32,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this,token, Toast.LENGTH_SHORT).show();
 
 
-        BottomNavigationView bottomNav = findViewById(id.bottom_nav);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(id.fragment_container, new Camera_fragment()).commit();
-        }
+
+
 
     }
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
-
-                    switch (item.getItemId()) {
-                        case id.nav_Cam:
-                            selectedFragment = new Camera_fragment();
-                            break;
-                        case id.nav_storage:
-                            selectedFragment = new Storage_fragment();
-                            break;
-                        case id.nav_settings:
-                            selectedFragment = new Settings_fragment();
-                            break;
-                    }
-                    getSupportFragmentManager().beginTransaction().replace(id.fragment_container,
-                            selectedFragment).commit();
-                    return true;
-                }
-            };
-
 
 }
 
