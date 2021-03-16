@@ -31,10 +31,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        /*this pulls the device token for firebase which is used to create the endpoint on aws
+        for the notifications
         String token = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, token);
-        Toast.makeText(MainActivity.this,token, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,token, Toast.LENGTH_SHORT).show();*/
+
+        BottomNavigationView bottomNavigationView = findViewById(id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(id.nav_Cam);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(menuItem -> {
+            switch(menuItem.getItemId())
+            {
+                case id.nav_Cam:
+                    return true;
+                //due to limitations with the api the android application isn't able to view the database
+                //so the storage page has been removed
+                 //case id.nav_storage:
+                case id.nav_user:
+                    Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+
+                    startActivity(intent);
+                    overridePendingTransition(0,0);
+                    return true;
+
+            }
+            return false;
+        });
+
 
 
         Button startButton = (Button)findViewById(R.id.buttonStart);
@@ -46,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
 

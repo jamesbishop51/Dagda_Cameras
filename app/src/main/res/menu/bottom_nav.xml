@@ -5,10 +5,10 @@
         android:icon="@drawable/ic_baseline_camera_24"
         android:title="@string/Cameras"
         />
-    <item
+    <!--<item
         android:id="@+id/nav_storage"
         android:icon="@drawable/ic_baseline_storage_24"
-        android:title="@string/storage"/>
+        android:title="@string/storage"/>-->
     <item
         android:id="@+id/nav_user"
         android:icon="@drawable/ic_baseline_person_24"

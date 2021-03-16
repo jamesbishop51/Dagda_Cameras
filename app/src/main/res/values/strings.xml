@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Dagda_Cameras</string>
     <string name="Cameras">Cameras</string>
-    <string name="Settings">Settings</string>
+    <string name="Settings">User Details</string>
     <string name="storage">Storage</string>
     />
     <string name="com_auth0_client_id">WoZwirbaiuKtFqzmviFrVSkapk6MH7lN</string>
