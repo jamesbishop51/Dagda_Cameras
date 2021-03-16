@@ -5,16 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.squareup.picasso.Picasso;
+
+import java.net.URL;
 
 import static android.content.ContentValues.TAG;
 import static edu.jbishop.dagda_cameras.R.*;
@@ -22,7 +29,10 @@ import static edu.jbishop.dagda_cameras.R.*;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    String email;
+    String name;
+    String imgURl;
+    String verified;
 
 
 
@@ -37,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, token);
         Toast.makeText(MainActivity.this,token, Toast.LENGTH_SHORT).show();*/
 
+
+
+        //pulling the user details from the login class
+        email = getIntent().getStringExtra("Email");
+        verified = getIntent().getStringExtra("Verified");
+        name = getIntent().getStringExtra("Name");
+        imgURl = getIntent().getStringExtra("ImgURL");
+
+
         BottomNavigationView bottomNavigationView = findViewById(id.bottom_nav);
         bottomNavigationView.setSelectedItemId(id.nav_Cam);
 
@@ -50,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
                  //case id.nav_storage:
                 case id.nav_user:
                     Intent intent = new Intent(getApplicationContext(), UserActivity.class);
-
+                    intent.putExtra("Email",email);
+                    intent.putExtra("ImgURL",imgURl);
+                    intent.putExtra("Name",name);
+                    intent.putExtra("Verified",verified);
                     startActivity(intent);
                     overridePendingTransition(0,0);
                     return true;

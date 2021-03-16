@@ -41,9 +41,15 @@ class LoginActivity : AppCompatActivity() {
     private fun update() {
         val name = cachedUserProfile?.name
         val email = cachedUserProfile?.email
+        val verified = cachedUserProfile?.isEmailVerified.toString()
+        val imgurl = cachedUserProfile?.pictureURL
+
 
         val intent = Intent (this@LoginActivity, MainActivity::class.java )
         intent.putExtra("Email",email)
+        intent.putExtra("ImgURL",imgurl)
+        intent.putExtra("Name",name)
+        intent.putExtra("Verified",verified)
         startActivity(intent)
 
     }

@@ -18,7 +18,7 @@ public class logoutActivity extends AppCompatActivity {
     private Auth0 auth0;
 
     public static final String EXTRA_CLEAR_CREDENTIALS = "com.auth0.CLEAR_CREDENTIALS";
-    public static final String EXTRA_ACCESS_TOKEN = "com.auth0.ACCESS_TOKEN";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,8 @@ public class logoutActivity extends AppCompatActivity {
         //Check if the activity was launched to log the user out
         if (getIntent().getBooleanExtra(EXTRA_CLEAR_CREDENTIALS, false)) {
             logout();
+            Intent intent = new Intent (this,LoginActivity.class);
+            startActivity(intent);
         }
     }
 
