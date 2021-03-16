@@ -3,6 +3,7 @@ package edu.jbishop.dagda_cameras
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 import com.auth0.android.Auth0
@@ -36,6 +37,10 @@ class LoginActivity : AppCompatActivity() {
                 getString(R.string.com_auth0_domain)
         )
         binding.buttonLogin.setOnClickListener { loginWithBrowser() }
+
+
+
+
     }
     //this updates and passes the user information to the rest of the app.
     private fun update() {
@@ -53,6 +58,7 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
 
     }
+
     private fun loginWithBrowser() {
         // Setup the WebAuthProvider, using the custom scheme and scope.
         WebAuthProvider.login(account)

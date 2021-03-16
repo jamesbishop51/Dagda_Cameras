@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dagda_Cameras">
-        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".LogoutKT"></activity>
+        <activity android:name=".UserActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".VideoActivity" />
-        <activity android:name=".logoutActivity"></activity>
+        <activity android:name=".logoutActivity" />
         <activity android:name=".MainActivity" />
 
         <service android:name=".services.MyFirebaseInstanceService">

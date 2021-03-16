@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button startButton = (Button)findViewById(R.id.buttonStart);
+        ImageButton startButton = findViewById(R.id.buttonPlay);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
